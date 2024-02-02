@@ -15,7 +15,7 @@ const LineChartComponent = () => {
       xaxis: {
         type: 'numeric',
         title: {
-          text: 'Time of the Day (minutes)'
+          text: 'Y)'
         }
       },
       yaxis: {
@@ -24,17 +24,17 @@ const LineChartComponent = () => {
         }
       },
       title: {
-        text: 'Line Chart with Time of the Day'
+        text: 'My chart'
       }
     }
   });
 
   useEffect(() => {
-    // Mock data for demonstration purposes
+    
     const generateData = () => {
       const data = [];
-      for (let i = 0; i < 1440; i += 30) { // Assuming data for every 30 minutes in a day
-        const count = Math.floor(Math.random() * 100); // Random count for demo
+      for (let i = 0; i < 1440; i += 30) { 
+        const count = Math.floor(Math.random() * 100);
         data.push({ x: i, y: count });
       }
       return data;
