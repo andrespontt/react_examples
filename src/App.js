@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ParentComponent from './component/ParentComponent';
 import LineChartComponent from './component/LineChartComponent';
+import FormComponent from './component/FormComponent';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/parent">Parent Component</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/form">Form Component</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -35,6 +39,7 @@ function App() {
               <Routes>
                 <Route path="/line-chart" element={<LineChartComponent />} />
                 <Route path="/parent" element={<ParentComponent />} />
+                <Route path="/form" element={<FormComponent />} />
                 <Route path="/" element={<h1>Welcome to the Home Page</h1>} />
               </Routes>
             </div>

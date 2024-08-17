@@ -26,7 +26,7 @@ const ParentComponent = () => {
 
   return (
     <div>
-      <button onClick={updateGridData}>Update Grid Data</button>
+      <button className="btn btn-primary" onClick={updateGridData}>Update Grid Data</button>
       <MyGridComponent initialData={newData} />
     </div>
   );
