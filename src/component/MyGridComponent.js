@@ -13,14 +13,14 @@ const MyGridComponent = ({ initialData }) => {
   }, [initialData]);
 
   const columnDefs = [
-    { headerName: 'ID', field: 'id' },
-    { headerName: 'Name', field: 'name' },
-    { headerName: 'Age', field: 'age' },
+    { headerName: 'ID', field: 'id', flex: 1 },
+    { headerName: 'Name', field: 'name', flex: 1 },
+    { headerName: 'Age', field: 'age', flex: 1 },
     // Add more columns as needed
   ];
 
   return (
-    <div className="ag-theme-alpine" style={{ height: 400, width: '100%' }}>
+    <div className="ag-theme-alpine-dark" style={{ height: 400, width: '100%' }}>
       <AgGridReact
         columnDefs={columnDefs}
         rowData={rowData}
