@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ParentComponent from './component/ParentComponent';
 import LineChartComponent from './component/LineChartComponent';
 import FormComponent from './component/FormComponent';
+import CountriesGridComponent from './component/CountriesGridComponent';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
                   <Link className="nav-link" to="/line-chart">Line Chart</Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="/grid">Countries Component</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/parent">Parent Component</Link>
                 </li>
                 <li className="nav-item">
@@ -40,6 +44,7 @@ function App() {
                 <Route path="/line-chart" element={<LineChartComponent />} />
                 <Route path="/parent" element={<ParentComponent />} />
                 <Route path="/form" element={<FormComponent />} />
+                <Route path="/grid" element={<CountriesGridComponent />} />
                 <Route path="/" element={<h1>Welcome to the Home Page</h1>} />
               </Routes>
             </div>

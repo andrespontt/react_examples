@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts';
-import singleCountryData from '../data/single_country.json';
+import singleCountryData from '../data/countries_sm.json';
 
 const LineChartComponent = () => {
   const [chartData, setChartData] = useState({
