@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts';
+import singleCountryData from '../data/single_country.json';
 
 const LineChartComponent = () => {
   const [chartData, setChartData] = useState({
     series: [{
-      name: 'Count',
+      name: 'Population',
       data: []
     }],
     options: {
@@ -15,33 +16,31 @@ const LineChartComponent = () => {
       xaxis: {
         type: 'numeric',
         title: {
-          text: 'Y)'
+          text: 'Year'
         }
       },
       yaxis: {
         title: {
-          text: 'Count'
+          text: 'Population'
         }
       },
       title: {
-        text: 'My chart'
+        text: 'Population Over Time'
       }
     }
   });
 
   useEffect(() => {
-    
-    const generateData = () => {
-      const data = [];
-      for (let i = 0; i < 1440; i += 30) { 
-        const count = Math.floor(Math.random() * 100);
-        data.push({ x: i, y: count });
-      }
+    const transformData = () => {
+      const data = singleCountryData.data[0].populationCounts.map(item => ({
+        x: item.year,
+        y: item.value
+      }));
       return data;
     };
 
     const newData = [...chartData.series];
-    newData[0].data = generateData();
+    newData[0].data = transformData();
 
     setChartData({
       ...chartData,
