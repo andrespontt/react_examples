@@ -5,6 +5,7 @@ import ParentComponent from './component/ParentComponent';
 import LineChartComponent from './component/LineChartComponent';
 import FormComponent from './component/FormComponent';
 import CountriesGridComponent from './component/CountriesGridComponent';
+import HomePageComponent from './component/HomePageComponent';
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
                 <Route path="/parent" element={<ParentComponent />} />
                 <Route path="/form" element={<FormComponent />} />
                 <Route path="/grid" element={<CountriesGridComponent />} />
-                <Route path="/" element={<h1>Welcome to the Home Page</h1>} />
+                <Route path="/" element={<HomePageComponent />} />
               </Routes>
             </div>
           </div>
